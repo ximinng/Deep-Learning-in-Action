@@ -24,9 +24,29 @@
 <a href="https://ximingxing.github.io/">https://ximingxing.github.io/</a>
 </h6>
 
-深度学习相关代码片段合集
+A collection of various deep learning architectures, models, and tips for PyTorch.
 
 <h2 align="center">:clipboard: 快速开始 -  Getting Started</h2>
+
+* Multilayer Perceptrons (MLP)
+
+* Convolutional Neural Networks (CNN)
+
+Recurrent Neural Networks (RNN)
+
+* Normalization Layers
+
+* Autoencoder (AE)
+
+* Generative Adversarial Network (GAN)
+
+* Graph Neural Network (GNN)
+
+    * Graph Convolutional network (GCN)
+
+* Tips and Tricks
+
+* Visualization and Interpretation
 
 <h2 align="center">关于 - About</h2>
 
