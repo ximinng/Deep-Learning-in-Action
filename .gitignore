@@ -135,3 +135,15 @@ dmypy.json
 *.ipr
 *.iml
 *.iws
+
+# Dataset
+/data
+/cora
+*.ally
+*.allx
+*.grpah
+*.index
+*.tx
+*.ty
+*.x
+*.y
