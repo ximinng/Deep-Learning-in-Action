@@ -59,7 +59,7 @@ Recurrent Neural Networks (RNN)
     <br>
     <div style="border-bottom: 1px solid #d9d9d9;display:inline-block;color: #999;padding: 2px;
     font-style: oblique; font-family: 'Times New Roman'">
-    Mental model of the learning process</div>
+    Figure: Mental model of the learning process</div>
 </div>
 
 <h2 align="center">鸣谢 - Acknowledgment</h2>
