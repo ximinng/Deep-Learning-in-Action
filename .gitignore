@@ -129,12 +129,14 @@ dmypy.json
 .pyre/
 
 # .idea
-#idea
 .idea/
 /idea/
 *.ipr
 *.iml
 *.iws
+
+# macos
+.DS_Store
 
 # Dataset
 /data
