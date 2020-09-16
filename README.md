@@ -2,12 +2,15 @@
 
 <p align="center">
     <a href="https://www.python.org/">
-        <img src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue" alt="Pyhton 3">
+        <img src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-success" alt="Pyhton 3">
+    </a>
+     <a href="https://pytorch.org/">
+        <img src="https://img.shields.io/badge/Pytorch-1.x-green" alt="Pytorch">
     </a>
     <a href="http://www.apache.org/licenses/">
-        <img src="https://img.shields.io/badge/license-Apache-blue" alt="GitHub">
+        <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
     </a>
-    <a href="#">
+    <a href="https://github.com/ximingxing/Deep-Learning-in-Action/pulls">
         <img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" alt="welcome">
     </a>
 </p>
