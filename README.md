@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-success" alt="Pyhton 3">
     </a>
      <a href="https://pytorch.org/">
-        <img src="https://img.shields.io/badge/Pytorch-1.x-green" alt="Pytorch">
+        <img src="https://img.shields.io/badge/Pytorch-1.x-success" alt="Pytorch">
     </a>
     <a href="http://www.apache.org/licenses/">
         <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
