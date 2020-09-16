@@ -29,8 +29,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 <h2 align="center">:clipboard: 快速开始 -  Getting Started</h2>
 
 * Multilayer Perceptrons (MLP)
-
-    [jupyter notebook](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
+    [Code: [jupyter notebook](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)]
 
 * Convolutional Neural Networks (CNN)
 
@@ -54,7 +53,7 @@ Recurrent Neural Networks (RNN)
 
 <div align="center">
     <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
-    width: 400px; height: 300px" 
+    width: 400px; height: 200px"
     src="https://github.com/ximingxing/Images/raw/master/dlic/mental_model_of_the_learning_process.png">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
