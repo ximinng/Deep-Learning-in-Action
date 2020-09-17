@@ -139,8 +139,7 @@ dmypy.json
 .DS_Store
 
 # Dataset
-/data
-/cora
+/graph_neural_networks/data/
 *.ally
 *.allx
 *.grpah
