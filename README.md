@@ -48,6 +48,8 @@ Recurrent Neural Networks (RNN)
 * Graph Neural Network (GNN)
 
     * Graph Convolutional network (GCN)
+    
+        [Code: [jupyter notebook](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)]
 
 * Tips and Tricks
 
