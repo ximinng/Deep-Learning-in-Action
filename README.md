@@ -37,7 +37,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 * Convolutional Neural Networks (CNN)
 
-    1.  [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/alexnet.py)
+    *  [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/alexnet.py)
 
 Recurrent Neural Networks (RNN)
 
