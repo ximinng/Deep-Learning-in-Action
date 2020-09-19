@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-   Description : 
+   Description :
+                    VGG for ImageNet-1K, implemented in PyTorch.
+                    Original paper: 'Very Deep Convolutional Networks for Large-Scale Image Recognition,'
+                    https://arxiv.org/abs/1409.1556.
    Author :        xxm
-"""
-"""
-    VGG for ImageNet-1K, implemented in PyTorch.
-    Original paper: 'Very Deep Convolutional Networks for Large-Scale Image Recognition,'
-    https://arxiv.org/abs/1409.1556.
 """
 
 __all__ = ['VGG', 'vgg11', 'vgg13', 'vgg16', 'vgg19', 'bn_vgg11', 'bn_vgg13', 'bn_vgg16', 'bn_vgg19', 'bn_vgg11b',
