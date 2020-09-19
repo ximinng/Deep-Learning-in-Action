@@ -43,9 +43,9 @@ Recurrent Neural Networks (RNN)
 
 * Autoencoder (AE)
 
-* Generative Adversarial Network (GAN)
+* Generative Adversarial Networks (GAN)
 
-* Graph Neural Network (GNN)
+* Graph Neural Networks (GNN)
 
     * Graph Convolutional network (GCN)
     
