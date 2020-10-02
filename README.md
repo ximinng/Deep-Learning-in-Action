@@ -31,9 +31,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 <h2 align="center">:clipboard: 快速开始 -  Getting Started</h2>
 
-* Multilayer Perceptrons (MLP)
-
-    [Code: [jupyter notebook](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)]
+* Multilayer Perceptrons (MLP) [jupyter notebook](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
 
 * Convolutional Neural Networks (CNN)
 
@@ -48,12 +46,11 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 * Graph Neural Networks (GNN)
 
-    * Graph Convolutional network (GCN)
-    
-        [Code: [jupyter notebook](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)]
+    * Graph Convolutional network (GCN) [jupyter notebook](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
+        
 * Deep Reinforcement Learning
 
-    * Deep Q Learning (DQN)
+    * Deep Q Learning (DQN) [jupyter notebook](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
 
 * Tips and Tricks
 
