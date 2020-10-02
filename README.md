@@ -40,9 +40,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
     *  [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/alexnet.py)
     *  [VGG](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/vgg.py)
 
-Recurrent Neural Networks (RNN)
-
-* Normalization Layers
+* Recurrent Neural Networks (RNN)
 
 * Autoencoder (AE)
 
@@ -53,6 +51,9 @@ Recurrent Neural Networks (RNN)
     * Graph Convolutional network (GCN)
     
         [Code: [jupyter notebook](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)]
+* Deep Reinforcement Learning
+
+    * Deep Q Learning (DQN)
 
 * Tips and Tricks
 
