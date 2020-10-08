@@ -40,7 +40,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 * Recurrent Neural Networks (RNN)
 
-* Autoencoder (AE)
+* AutoEncoder (AE)
 
 * Generative Adversarial Networks (GAN)
 
