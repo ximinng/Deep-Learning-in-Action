@@ -56,6 +56,9 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 * Visualization and Interpretation
 
+    * Tensorboard
+    * Visdom
+
 <h2 align="center">关于 - About</h2>
 
 <div align="center">
