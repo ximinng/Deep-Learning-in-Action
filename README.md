@@ -16,10 +16,10 @@
 </p>
 
 <p align="center">
-    <a href="#clipboard-getting-started">快速开始 - Getting Started</a> •
-    <a href="#table-of-contents">内容 - Table of Contents</a> •
-    <a href="#about">关于 - About</a> •
-    <a href="#acknowledgment">鸣谢 - Acknowledgment</a> •
+    <a href="#clipboard-getting-started">Getting Started</a> •
+    <a href="#table-of-contents">Table of Contents</a> •
+    <a href="#about">About</a> •
+    <a href="#acknowledgment">Acknowledgment</a> •
     <a href="#speech_balloon-faq">FAQ</a> •
 </p>
 
@@ -29,7 +29,7 @@
 
 A collection of various deep learning architectures, models, and tips for PyTorch.
 
-<h2 align="center">:clipboard: 快速开始 -  Getting Started</h2>
+<h2 align="center">:clipboard: Getting Started</h2>
 
 * Multilayer Perceptrons (MLP) [[jupyter notebook]](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
 
@@ -59,7 +59,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
     * Tensorboard
     * Visdom
 
-<h2 align="center">关于 - About</h2>
+<h2 align="center">About</h2>
 
 <div align="center">
     <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
@@ -101,7 +101,10 @@ A collection of various deep learning architectures, models, and tips for PyTorc
     Figure: ResNet</div>
 </div>
 
-<h2 align="center">鸣谢 - Acknowledgment</h2>
+<h2 align="center">Acknowledgment</h2>
+
+### [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
+
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
 
 <h2 align="center">:speech_balloon: FAQ</h2>
