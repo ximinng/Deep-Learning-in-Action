@@ -103,7 +103,7 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 <h2 align="center">Acknowledgment</h2>
 
-### [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
+#### # [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
 
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
 
