@@ -71,36 +71,6 @@ A collection of various deep learning architectures, models, and tips for PyTorc
     Figure: Multilayer Perceptrons model of the learning process</div>
 </div>
 
-<div align="center">
-    <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-    height="300"
-    src="https://github.com/ximingxing/Images/blob/master/dlic/alexnet.png">
-    <br>
-    <div style="border-bottom: 1px solid #d9d9d9;display:inline-block;color: #999;padding: 2px;
-    font-style: oblique; font-family: 'Times New Roman'">
-    Figure: AlexNet</div>
-</div>
-
-<div align="center">
-    <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-    height="350"
-    src="https://github.com/ximingxing/Images/raw/master/dlic/vgg16.png">
-    <br>
-    <div style="border-bottom: 1px solid #d9d9d9;display:inline-block;color: #999;padding: 2px;
-    font-style: oblique; font-family: 'Times New Roman'">
-    Figure: VGG</div>
-</div>
-
-<div align="center">
-    <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-    height="400"
-    src="https://github.com/ximingxing/Images/raw/master/dlic/ResNet.png">
-    <br>
-    <div style="border-bottom: 1px solid #d9d9d9;display:inline-block;color: #999;padding: 2px;
-    font-style: oblique; font-family: 'Times New Roman'">
-    Figure: ResNet</div>
-</div>
-
 <h2 align="center">Acknowledgment</h2>
 
 #### # [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
