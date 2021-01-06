@@ -38,7 +38,11 @@
 
 #### Required PyTorch version
 
-- our code requires `torch >= 1.0`
+- our code requires `python >= 3.0`, `torch >= 1.0`.
+
+#### Required other packages.
+
+- `numpy == 1.18.2`, `scipy == 1.4.1`, `scikit-learn == 0.22.2`, `matplotlib == 3.2.1`.
 
 #### Pip
 
@@ -94,6 +98,8 @@ resources that pair well with the models and componenets here are listed below.
 ### # Books
 
 - Delip Rao., & Brain McMahan., (2019). *Natural Language Processing with PyTorch*. Sebastopol: O'Reilly Media,Inc.
+
+- Tariq Rashid., (2018). *Make Your Own Neural Network*. Beijing: Posts & Telecom Press.
 
 - Tariq Rashid., (2020). *Make Your First GAN with Pytorch*. Beijing: Posts & Telecom Press.
 
