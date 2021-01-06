@@ -21,9 +21,10 @@
     <a href="#about">About</a> •
     <a href="#acknowledgment">Acknowledgment</a> •
     <a href="#speech_balloon-faq">FAQ</a> •
+    <a href="#cite">Citing</a> •
 </p>
 
-<h6 align="center">Made by ximing Xing • :milky_way: 
+<h6 align="center">Made by ximing Xing • :milky_way:
 <a href="https://ximingxing.github.io/">https://ximingxing.github.io/</a>
 </h6>
 
@@ -31,12 +32,29 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 <h2 align="center">:clipboard: Getting Started</h2>
 
-* Multilayer Perceptrons (MLP) [[jupyter notebook]](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
+### Overview
+
+### Installation
+
+#### Required PyTorch version
+
+- our code requires `torch >= 1.0`
+
+#### Pip
+
+```shell
+pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+<h2 align="center">:clipboard: Table of Contents</h2>
+
+* Multilayer Perceptrons (
+  MLP) [[jupyter notebook]](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
 
 * Convolutional Neural Networks (CNN)
 
-    *  [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/alexnet.py)
-    *  [VGG](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/vgg.py)
+    * [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/alexnet.py)
+    * [VGG](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/vgg.py)
 
 * Recurrent Neural Networks (RNN)
 
@@ -46,11 +64,13 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 * Graph Neural Networks (GNN)
 
-    * Graph Convolutional network (GCN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
-        
+    * Graph Convolutional network (
+      GCN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
+
 * Deep Reinforcement Learning
 
-    * Deep Q Learning (DQN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
+    * Deep Q Learning (
+      DQN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
 
 * Tips and Tricks
 
@@ -73,9 +93,44 @@ A collection of various deep learning architectures, models, and tips for PyTorc
 
 <h2 align="center">Acknowledgment</h2>
 
+One of the greatest assets of **Deep Learning** is the community and their contributions. A few of my favourite
+resources that pair well with the models and componenets here are listed below.
+
+### Books
+
+#### # Natural Language Processing with PyTorch (O'Reilly) Copyright 2019, Delip Rao and Brain McMahan, 978-1-491-97823-8.
+
+#### # Make Your First GAN with Pytorch
+
+### Posts
+
 #### # [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
+
+### Code warehouse
+
+#### # [PyTorch Metric Learning](https://github.com/KevinMusgrave/pytorch-metric-learning)
+
+#### # [Fast Image Augmentation library](https://github.com/albumentations-team/albumentations)
+
+### Papers
 
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
 
 <h2 align="center">:speech_balloon: FAQ</h2>
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
+
+<h2 align="center">:speech_balloon: Citing</h2>
+<p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
+
+#### BibTeX
+
+```bibtex
+@misc{xx2019dlic,
+      author = {Ximing Xing},
+      title = {Deep Learning in Action},
+      year = {2019},
+      publisher = {GitHub},
+      journal = {GitHub repository},
+      howpublished = {\url{https://github.com/ximingxing/Deep-Learning-in-Action}}
+}
+```
