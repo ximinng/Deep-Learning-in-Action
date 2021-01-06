@@ -28,7 +28,7 @@
 <a href="https://ximingxing.github.io/">https://ximingxing.github.io/</a>
 </h6>
 
-A collection of various deep learning architectures, models, and tips for PyTorch.
+<p align="center">A collection of various deep learning architectures, models, and tips for PyTorch.</p>
 
 <h2 align="center">:clipboard: Getting Started</h2>
 
@@ -48,11 +48,10 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 
 <h2 align="center">:clipboard: Table of Contents</h2>
 
-* Multilayer Perceptrons (
-  MLP) [[jupyter notebook]](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
+* Multilayer Perceptrons
+    * [MLP](https://github.com/rasbt/deeplearning-models/blob/master/pytorch_ipynb/mlp/mlp-basic.ipynb)
 
 * Convolutional Neural Networks (CNN)
-
     * [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/alexnet.py)
     * [VGG](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/vgg.py)
 
@@ -63,14 +62,10 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 * Generative Adversarial Networks (GAN)
 
 * Graph Neural Networks (GNN)
-
-    * Graph Convolutional network (
-      GCN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
+    * [Graph Convolutional network (GCN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
 
 * Deep Reinforcement Learning
-
-    * Deep Q Learning (
-      DQN) [[jupyter notebook]](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
+    * [Deep Q Learning (DQN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
 
 * Tips and Tricks
 
@@ -96,23 +91,23 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 One of the greatest assets of **Deep Learning** is the community and their contributions. A few of my favourite
 resources that pair well with the models and componenets here are listed below.
 
-### Books
+### # Books
 
-#### # Natural Language Processing with PyTorch (O'Reilly) Copyright 2019, Delip Rao and Brain McMahan, 978-1-491-97823-8.
+- Delip Rao., & Brain McMahan., (2019). *Natural Language Processing with PyTorch*. Sebastopol: O'Reilly Media,Inc.
 
-#### # Make Your First GAN with Pytorch
+- Tariq Rashid., (2020). *Make Your First GAN with Pytorch*. Beijing: Posts & Telecom Press.
 
-### Posts
+### # Posts
 
-#### # [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
+- [6 GAN Architectures You Really Should Know](https://neptune.ai/blog/6-gan-architectures)
 
-### Code warehouse
+### # Open-source repos
 
-#### # [PyTorch Metric Learning](https://github.com/KevinMusgrave/pytorch-metric-learning)
+- [PyTorch Metric Learning](https://github.com/KevinMusgrave/pytorch-metric-learning)
 
-#### # [Fast Image Augmentation library](https://github.com/albumentations-team/albumentations)
+- [Fast Image Augmentation library](https://github.com/albumentations-team/albumentations)
 
-### Papers
+### # Papers
 
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
 
