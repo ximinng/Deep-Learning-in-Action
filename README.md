@@ -21,7 +21,7 @@
     <a href="#about">About</a> •
     <a href="#acknowledgment">Acknowledgment</a> •
     <a href="#speech_balloon-faq">FAQ</a> •
-    <a href="#cite">Citing</a> •
+    <a href="#cite">Citing</a>
 </p>
 
 <h6 align="center">Made by ximing Xing • :milky_way:
