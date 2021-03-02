@@ -116,6 +116,7 @@ resources that pair well with the models and componenets here are listed below.
 - **GANs:**
     - [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
     - [How to train a GAN?](https://github.com/soumith/ganhacks)
+    - [PyTorch GANs Library](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN)
 
 - **Metric Learning:**
     - [PyTorch Metric Learning](https://github.com/KevinMusgrave/pytorch-metric-learning)
