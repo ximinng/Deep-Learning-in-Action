@@ -137,14 +137,3 @@ dmypy.json
 
 # macos
 .DS_Store
-
-# Dataset
-/graph_neural_networks/data/
-*.ally
-*.allx
-*.grpah
-*.index
-*.tx
-*.ty
-*.x
-*.y
