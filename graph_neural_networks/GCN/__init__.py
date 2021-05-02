@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-   Description :   gcn
+   Description :   GCN
    References:
         - Semi-Supervised Classification with Graph Convolutional Networks
         - Paper: https://arxiv.org/abs/1609.02907
