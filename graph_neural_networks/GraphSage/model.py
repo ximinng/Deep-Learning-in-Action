@@ -12,12 +12,12 @@ import torch.nn.init as init
 
 class NeighborAggregator(nn.Module):
     def __init__(self, input_dim, output_dim, use_bias=False, aggr_method="mean"):
-        """聚合节点邻居
-        Args:
-         input_dim: 输入特征的维度
-         output_dim: 输出特征的维度
-         use_bias: 是否使用偏置 (default: {False})
-         aggr_method: 邻居聚合方式 (default: {mean})
+        """
+        聚合节点邻居
+        :param input_dim: 输入特征的维度
+        :param output_dim: 输出特征的维度
+        :param use_bias: 是否使用偏置 (default: False)
+        :param aggr_method: 邻居聚合方式 (default: "mean")
         """
         super(NeighborAggregator, self).__init__()
         self.input_dim = input_dim
@@ -58,18 +58,18 @@ class NeighborAggregator(nn.Module):
 
 
 class SageGCN(nn.Module):
-
-    def __init__(self, input_dim, hidden_dim, activation=F.relu,
+    def __init__(self, input_dim, hidden_dim,
+                 activation=F.relu,
                  aggr_neighbor_method="mean", aggr_hidden_method="sum"):
-        """SageGCN层定义
-        Args:
-        input_dim: 输入特征的维度
-        hidden_dim: 隐层特征的维度，
-            当aggr_hidden_method=sum, 输出维度为hidden_dim
-            当aggr_hidden_method=concat, 输出维度为hidden_dim*2
-        activation: 激活函数
-        aggr_neighbor_method: 邻居特征聚合方法，["mean", "sum", "max"]
-        aggr_hidden_method: 节点特征的更新方法，["sum", "concat"]
+        """
+        SageGCN层定义
+        :param input_dim: 输入特征的维度
+        :param hidden_dim: 隐层特征的维度,
+                当aggr_hidden_method=sum, 输出维度为hidden_dim
+                当aggr_hidden_method=concat, 输出维度为hidden_dim*2
+        :param activation: 激活函数
+        :param aggr_neighbor_method: 邻居特征聚合方法，["mean", "sum", "max"]
+        :param aggr_hidden_method: 节点特征的更新方法，["sum", "concat"]
         """
         super(SageGCN, self).__init__()
 
@@ -114,4 +114,34 @@ class SageGCN(nn.Module):
 
 
 class GraphSage(nn.Module):
-    pass
+    def __init__(self, input_dim, hidden_dim, num_neighbors_list):
+        super(GraphSage, self).__init__()
+        self.input_dim = input_dim
+        self.hidden_dim = hidden_dim
+        self.num_neighbors_list = num_neighbors_list
+        self.num_layers = len(num_neighbors_list)
+
+        self.gcn = nn.ModuleList()
+        self.gcn.append(SageGCN(input_dim, hidden_dim[0]))
+        for index in range(0, len(hidden_dim) - 2):
+            self.gcn.append(SageGCN(hidden_dim[index], hidden_dim[index + 1]))
+        self.gcn.append(SageGCN(hidden_dim[-2], hidden_dim[-1], activation=None))
+
+    def forward(self, node_feats_list):
+        hid = node_feats_list
+        for layer in range(self.num_layers):
+            next_hid = []
+            gcn = self.gcn[layer]
+            for hop in range(self.num_layers - layer):
+                src_node_feats = hid[hop]
+                src_node_num = len(src_node_feats)
+                neighbor_node_feats = hid[hop + 1].view((src_node_num, self.num_neighbors_list[hop], -1))
+                h = gcn(src_node_feats, neighbor_node_feats)
+                next_hid.append(h)
+            hid = next_hid
+        return hid[0]
+
+    def extra_repr(self):
+        return 'in_features={}, num_neighbors_list={}'.format(
+            self.input_dim, self.num_neighbors_list
+        )
