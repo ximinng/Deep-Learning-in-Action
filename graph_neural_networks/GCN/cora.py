@@ -36,7 +36,7 @@ class CoraData(object):
     filenames = ["ind.cora.{}".format(name) for name in
                  ['x', 'tx', 'allx', 'y', 'ty', 'ally', 'graph', 'test.index']]
 
-    def __init__(self, data_root="cora", rebuild=False, adj_dict=False):
+    def __init__(self, data_root="cora", rebuild=False):
         """Cora数据，包括数据下载，处理，加载等功能
         当数据的缓存文件存在时，将使用缓存文件，否则将下载、进行处理，并缓存到磁盘
 
@@ -59,7 +59,6 @@ class CoraData(object):
                 是否返回dict类型的邻接矩阵
         """
         self.data_root = data_root
-        self.return_adj_dict = adj_dict
         save_file = osp.join(self.data_root, "processed_cora.pkl")
         if osp.exists(save_file) and not rebuild:
             print("Using Cached file: {}".format(save_file))
@@ -85,8 +84,8 @@ class CoraData(object):
         引用自：https://github.com/rusty1s/pytorch_geometric
         """
         print("Process data ...")
-        _, tx, allx, y, ty, ally, graph, test_index = [self.read_data(
-            osp.join(self.data_root, "raw", name)) for name in self.filenames]
+        _, tx, allx, y, ty, ally, graph, test_index = [
+            self.read_data(osp.join(self.data_root, "raw", name)) for name in self.filenames]
         train_index = np.arange(y.shape[0])
         val_index = np.arange(y.shape[0], y.shape[0] + 500)
         sorted_test_index = sorted(test_index)
@@ -105,10 +104,7 @@ class CoraData(object):
         val_mask[val_index] = True
         test_mask[test_index] = True
 
-        if self.return_adj_dict:
-            adjacency = graph
-        else:
-            adjacency = self.build_adjacency(graph)
+        adjacency = self.build_adjacency(graph)
 
         print("Node's feature shape: ", x.shape)
         print("Node's label shape: ", y.shape)

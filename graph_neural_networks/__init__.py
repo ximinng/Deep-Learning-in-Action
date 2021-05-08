@@ -3,6 +3,3 @@
    Description : 
    Author :        xxm
 """
-import sys
-
-print(sys.path)
