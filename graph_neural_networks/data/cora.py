@@ -15,9 +15,6 @@ import numpy as np
 import scipy.sparse as sp
 import torch
 
-Data = namedtuple('Data', ['x', 'y', 'adjacency',
-                           'train_mask', 'val_mask', 'test_mask'])
-
 
 def tensor_from_numpy(x, device):
     return torch.from_numpy(x).to(device)
@@ -39,7 +36,7 @@ class CoraData(object):
     filenames = ["ind.cora.{}".format(name) for name in
                  ['x', 'tx', 'allx', 'y', 'ty', 'ally', 'graph', 'test.index']]
 
-    def __init__(self, data_root="cora", rebuild=False):
+    def __init__(self, data_root="cora", rebuild=False, adj_dict=False):
         """Cora数据，包括数据下载，处理，加载等功能
         当数据的缓存文件存在时，将使用缓存文件，否则将下载、进行处理，并缓存到磁盘
 
@@ -58,8 +55,11 @@ class CoraData(object):
                 缓存数据路径: {data_root}/processed_cora.pkl
             rebuild: boolean, optional
                 是否需要重新构建数据集，当设为True时，如果存在缓存数据也会重建数据
+            adj_dict: boolean, optional
+                是否返回dict类型的邻接矩阵
         """
         self.data_root = data_root
+        self.return_adj_dict = adj_dict
         save_file = osp.join(self.data_root, "processed_cora.pkl")
         if osp.exists(save_file) and not rebuild:
             print("Using Cached file: {}".format(save_file))
@@ -70,6 +70,9 @@ class CoraData(object):
             with open(save_file, "wb") as f:
                 pickle.dump(self.data, f)
             print("Cached file: {}".format(save_file))
+
+        self.Data = namedtuple('Data', ['x', 'y', 'adjacency',
+                                        'train_mask', 'val_mask', 'test_mask'])
 
     @property
     def data(self):
@@ -101,7 +104,12 @@ class CoraData(object):
         train_mask[train_index] = True
         val_mask[val_index] = True
         test_mask[test_index] = True
-        adjacency = self.build_adjacency(graph)
+
+        if self.return_adj_dict:
+            adjacency = graph
+        else:
+            adjacency = self.build_adjacency(graph)
+
         print("Node's feature shape: ", x.shape)
         print("Node's label shape: ", y.shape)
         print("Adjacency's shape: ", adjacency.shape)
@@ -109,8 +117,8 @@ class CoraData(object):
         print("Number of validation nodes: ", val_mask.sum())
         print("Number of test nodes: ", test_mask.sum())
 
-        return Data(x=x, y=y, adjacency=adjacency,
-                    train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
+        return self.Data(x=x, y=y, adjacency=adjacency,
+                         train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
 
     def maybe_download(self):
         save_path = os.path.join(self.data_root, "raw")

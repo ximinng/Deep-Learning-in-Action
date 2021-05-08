@@ -109,12 +109,18 @@ class SageGCN(nn.Module):
 
     def extra_repr(self):
         output_dim = self.hidden_dim if self.aggr_hidden_method == "sum" else self.hidden_dim * 2
-        return 'in_features={}, out_features={}, aggr_hidden_method={}' \
-            .format(self.input_dim, output_dim, self.aggr_hidden_method)
+        return 'in_features={}, out_features={}, aggr_hidden_method={}'.format(
+            self.input_dim, output_dim, self.aggr_hidden_method)
 
 
 class GraphSage(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_neighbors_list):
+        """
+        GraphSage
+        :param input_dim:
+        :param hidden_dim:
+        :param num_neighbors_list:
+        """
         super(GraphSage, self).__init__()
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim
@@ -143,5 +149,9 @@ class GraphSage(nn.Module):
 
     def extra_repr(self):
         return 'in_features={}, num_neighbors_list={}'.format(
-            self.input_dim, self.num_neighbors_list
-        )
+            self.input_dim, self.num_neighbors_list)
+
+
+if __name__ == '__main__':
+    model = GraphSage(2708, 200, )
+    print(model)
