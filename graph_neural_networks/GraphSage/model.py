@@ -117,9 +117,10 @@ class GraphSage(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_neighbors_list):
         """
         GraphSage
-        :param input_dim:
-        :param hidden_dim:
-        :param num_neighbors_list:
+        :param input_dim: 输入特征的维度
+        :param hidden_dim: 隐藏层的维度, like [128, 7]
+        :param num_neighbors_list: 每层采样邻居的数量, like [10, 10]
+               `num_neighbors_list` 列表长度代表网络的层数
         """
         super(GraphSage, self).__init__()
         self.input_dim = input_dim
@@ -153,5 +154,5 @@ class GraphSage(nn.Module):
 
 
 if __name__ == '__main__':
-    model = GraphSage(2708, 200, )
+    model = GraphSage(1403, [128, 64, 7], [10, 10, 10])
     print(model)
