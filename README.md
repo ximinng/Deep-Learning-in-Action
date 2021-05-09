@@ -69,7 +69,8 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
     * [basic]()
 
 * Graph Neural Networks (GNN)
-    * [Graph Convolutional network (GCN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/gcn/graph_convolutional_neural_network.ipynb)
+    * [Graph Convolutional network (GCN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GCN/graph_convolutional_neural_network.ipynb)
+    * [GraphSage](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GraphSage/GraphSage.ipynb)
 
 * Deep Reinforcement Learning
     * [Deep Q Learning (DQN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
