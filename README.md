@@ -62,6 +62,12 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 
 * Recurrent Neural Networks (RNN)
 
+* Transformer
+    * NLP
+        * Bert
+    * Vision Transformer
+        * ViT
+
 * AutoEncoder (AE)
     * [basic](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/auto_encoder/AutoEncoder.ipynb)
 
@@ -74,6 +80,10 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 
 * Deep Reinforcement Learning
     * [Deep Q Learning (DQN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
+    * [Reinforcement Learning with Model-Agnostic Meta-Learning]()
+
+* Meta Learning
+    * [MAML]()
 
 * Tips and Tricks
     * [How to train a GAN?](https://github.com/soumith/ganhacks)
@@ -114,6 +124,9 @@ resources that pair well with the models and componenets here are listed below.
 
 ### # Open-source repos
 
+- **Tensors operations:**
+    - [einops](https://github.com/arogozhnikov/einops)
+
 - **GANs:**
     - [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
     - [How to train a GAN?](https://github.com/soumith/ganhacks)
@@ -124,6 +137,9 @@ resources that pair well with the models and componenets here are listed below.
 
 - **Image Augmentation:**
     - [albumentations](https://github.com/albumentations-team/albumentations) (Fast Image Augmentation library.)
+
+- **Vision Transformer:**
+    - [Vision Transformer - Pytorch](https://github.com/lucidrains/vit-pytorch)
 
 ### # Papers
 
@@ -138,7 +154,7 @@ resources that pair well with the models and componenets here are listed below.
 #### BibTeX
 
 ```bibtex
-@misc{xx2019dlic,
+@misc{xxm2019dlic,
       author = {Ximing Xing},
       title = {Deep Learning in Action},
       year = {2019},
