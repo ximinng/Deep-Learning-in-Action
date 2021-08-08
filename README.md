@@ -34,6 +34,8 @@
 
 ### Overview
 
+This repository contains many deep learning algorithms and their applications, this is how I love deep learning.
+
 ### Installation
 
 #### Required PyTorch version
@@ -63,18 +65,22 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 * Recurrent Neural Networks (RNN)
 
 * Transformer
-    * NLP
-        * Bert
-    * Vision Transformer
-        * ViT
+    * Bert
+    * GPT-2
+
+* Vision Transformer
+    * [ViT](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/vision_transformer/Vit.py)
 
 * AutoEncoder (AE)
     * [basic](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/auto_encoder/AutoEncoder.ipynb)
 
 * Generative Adversarial Networks (GAN)
     * [basic]()
+    * CycleGAN
 
 * Graph Neural Networks (GNN)
+    * DeepWalk
+    * Node2Vec
     * [Graph Convolutional network (GCN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GCN/graph_convolutional_neural_network.ipynb)
     * [GraphSage](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GraphSage/GraphSage.ipynb)
 
@@ -124,6 +130,9 @@ resources that pair well with the models and componenets here are listed below.
 
 ### # Open-source repos
 
+- **PyTorch wrapper:**
+    - [Pytorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning)
+
 - **Tensors operations:**
     - [einops](https://github.com/arogozhnikov/einops)
 
@@ -140,8 +149,6 @@ resources that pair well with the models and componenets here are listed below.
 
 - **Vision Transformer:**
     - [Vision Transformer - Pytorch](https://github.com/lucidrains/vit-pytorch)
-
-### # Papers
 
 <p align="right"><a href="#dlic"><sup>▴ Back to top</sup></a></p>
 
