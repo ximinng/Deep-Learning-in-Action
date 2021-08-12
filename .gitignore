@@ -135,5 +135,8 @@ dmypy.json
 *.iml
 *.iws
 
-# macos
+# system
 .DS_Store
+
+# pytorch-lighting logs
+lightning_logs/*
