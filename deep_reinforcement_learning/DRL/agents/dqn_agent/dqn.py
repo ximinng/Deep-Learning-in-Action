@@ -27,7 +27,7 @@ class Q_Network(nn.Module):
     def __init__(self,
                  obs_size: int,
                  hidden_size: int,
-                 n_actions: int = 128):
+                 n_actions: int):
         r"""
         Initializes internal Module state.
 
@@ -165,6 +165,7 @@ class DQN(LightningModule):
                  env: str = "CartPole-v1",
                  batch_size: int = 16,
                  replay_size: int = 1000,
+                 hidden_size: int = 128,
                  learning_rate: float = 1e-2,
                  gamma: float = 0.99,
                  sync_rate: int = 10,
@@ -197,8 +198,8 @@ class DQN(LightningModule):
         obs_size = self.env.observation_space.shape[0]
         n_actions = self.env.action_space.n
 
-        self.net = Q_Network(obs_size, n_actions)
-        self.target_net = Q_Network(obs_size, n_actions)
+        self.net = Q_Network(obs_size, hidden_size, n_actions)
+        self.target_net = Q_Network(obs_size, hidden_size, n_actions)
 
         self.buffer = ReplayBuffer(replay_size)
         self.agent = Agent(self.env, self.buffer)
@@ -285,5 +286,5 @@ class DQN(LightningModule):
 
 if __name__ == '__main__':
     model = DQN()
-    trainer = Trainer(max_epochs=200, val_check_interval=100)
+    trainer = Trainer(max_epochs=150, val_check_interval=100)
     trainer.fit(model)
