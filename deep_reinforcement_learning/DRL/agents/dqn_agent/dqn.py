@@ -189,7 +189,7 @@ class DQN(LightningModule):
             eps_start:
             eps_end:
             episode_length:
-            warm_start_steps:
+            warm_start_steps: populate replay buff
         """
         super(DQN, self).__init__()
         self.save_hyperparameters()
@@ -275,7 +275,7 @@ class DQN(LightningModule):
     def train_dataloader(self) -> DataLoader:
         dataset = RLDataset(self.buffer, self.hparams.episode_length)
         dataloader = DataLoader(
-            dataset, self.hparams.batch_size
+            dataset, self.hparams.batch_size, pin_memory=True
         )
         return dataloader
 
