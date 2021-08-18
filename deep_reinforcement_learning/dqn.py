@@ -95,6 +95,7 @@ class Trainer(object):
 
     def __init__(self,
                  env: str = "CartPole-v0",
+                 total_episode: int = 200,
                  batch_size: int = 16,
                  replay_size: int = 1000,
                  hidden_size: int = 128,
@@ -135,6 +136,7 @@ class Trainer(object):
 
         self.optimizer = optim.Adam(self.net.parameters(), learning_rate)
 
+        self.total_episode = total_episode
         self.eps_start = eps_start
         self.eps_end = eps_end
         self.episode_length = episode_length
@@ -151,6 +153,13 @@ class Trainer(object):
         self.populate(warm_start_steps)
 
         self.global_step = 0
+
+    def train_dataloader(self) -> DataLoader:
+        dataset = RLDataset(self.buffer, self.episode_length)
+        dataloader = DataLoader(
+            dataset, self.batch_size, pin_memory=True
+        )
+        return dataloader
 
     def populate(self, steps: int = 1000) -> None:
         r"""
@@ -176,47 +185,45 @@ class Trainer(object):
         loss = nn.MSELoss()
         return loss(state_action_value, expected_state_action_values)
 
-    def training_step(self, batch: Tuple[torch.Tensor, torch.Tensor], nb_batch):
-        epsilon = max(self.eps_end,
-                      self.eps_start - self.global_step + 1 / self.eps_last_frame)
+    def training_step(self):
+        dataloader = self.train_dataloader()
+        for episode in range(self.total_episode):
+            for states, actions, rewards, next_states, dones in dataloader:
+                batch = (states, actions, rewards, next_states, dones)
 
-        # step through environment with agent
-        reward, done, info = self.agent.play_step(self.net, epsilon, device)
-        self.episode_reward += reward
+                epsilon = max(self.eps_end,
+                              self.eps_start - self.global_step + 1 / self.eps_last_frame)
 
-        # calculates training loss
-        loss = self.loss_fn(batch)
+                # step through environment with agent
+                reward, done, info = self.agent.play_step(self.net, epsilon, device)
+                self.episode_reward += reward
 
-        # episode end
-        if done:
-            self.total_reward = self.episode_reward
-            self.episode_reward = 0
+                # calculates training loss
+                loss = self.loss_fn(batch)
 
-        # copy net to target_net (soft update)
-        if self.global_step % self.sync_rate == 0:
-            self.target_net.load_state_dict(self.net.state_dict())
+                # episode end
+                if done:
+                    self.total_reward = self.episode_reward
+                    self.episode_reward = 0
 
-        self.optimizer.zero_grad()
-        loss.backward()
-        self.optimizer.step()
+                # copy net to target_net (soft update)
+                if self.global_step % self.sync_rate == 0:
+                    self.target_net.load_state_dict(self.net.state_dict())
 
-        log = {
-            "total_reward": torch.tensor(self.total_reward).to(device),
-            "reward": torch.tensor(reward).to(device),
-            "train_loss": loss
-        }
-        status = {
-            "steps": torch.tensor(self.global_step).to(device),
-            "total_reward": torch.tensor(self.total_reward).to(device)
-        }
+                self.optimizer.zero_grad()
+                loss.backward()
+                self.optimizer.step()
 
-    def train_dataloader(self) -> DataLoader:
-        dataset = RLDataset(self.buffer, self.episode_length)
-        dataloader = DataLoader(
-            dataset, self.batch_size, pin_memory=True
-        )
-        return dataloader
+                log = {
+                    "total_reward": torch.tensor(self.total_reward).to(device),
+                    "reward": torch.tensor(reward).to(device),
+                    "train_loss": loss
+                }
+                status = {
+                    "steps": torch.tensor(self.global_step).to(device),
+                    "total_reward": torch.tensor(self.total_reward).to(device)
+                }
 
 
-trainer = Trainer()
-dataloader = trainer.train_dataloader()
+if __name__ == '__main__':
+    trainer = Trainer()

@@ -14,7 +14,7 @@ import numpy as np
 
 Experience = namedtuple(
     "Experience",
-    field_names=["state", "action", "reward", "next_state", "done"]
+    field_names=["state", "action", "reward", "done", "next_state"]
 )
 
 
@@ -31,13 +31,13 @@ class ReplayBuffer(object):
 
     def sample(self, sample_size: int) -> Tuple:
         indices = np.random.choice(len(self.buffer), sample_size, replace=False)
-        states, actions, rewards, next_states, dones = zip(*(self.buffer[idx] for idx in indices))
+        states, actions, rewards, dones, next_states = zip(*(self.buffer[idx] for idx in indices))
         return (
             np.array(states),
             np.array(actions),
             np.array(rewards, dtype=np.float32),
-            np.array(next_states),
-            np.array(dones, dtype=np.bool)
+            np.array(dones, dtype=np.bool),
+            np.array(next_states)
         )
 
     def __len__(self) -> int:

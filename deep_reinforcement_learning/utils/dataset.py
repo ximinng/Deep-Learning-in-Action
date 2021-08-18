@@ -19,6 +19,6 @@ class RLDataset(IterableDataset):
         self.sample_size = sample_size
 
     def __iter__(self) -> Tuple:
-        states, actions, rewards, next_states, dones = self.buffer.sample(self.sample_size)
+        states, actions, rewards, dones, next_states = self.buffer.sample(self.sample_size)
         for i in range(len(dones)):
-            yield states[i], actions[i], rewards[i], next_states[i], dones[i]
+            yield states[i], actions[i], rewards[i], dones[i], next_states[i]

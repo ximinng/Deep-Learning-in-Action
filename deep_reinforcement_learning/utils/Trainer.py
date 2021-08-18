@@ -16,13 +16,15 @@ from torch import Tensor
 from torch.utils.data import DataLoader
 from .dataset import RLDataset
 
+from pytorch_lightning.core.mixins import HyperparametersMixin
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-class Trainer(object):
+class Trainer(HyperparametersMixin):
 
-    def __init__(self, config, buffer):
-        self.config = config
+    def __init__(self):
+        self.save_hyperparameters()
 
     def train_dataloader(self) -> DataLoader:
         dataset = RLDataset(self.buffer, self.hparams.episode_length)
