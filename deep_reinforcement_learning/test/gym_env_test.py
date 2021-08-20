@@ -19,6 +19,31 @@ def gym_CartPole_env_test():
         env.step(env.action_space.sample())  # take a random action
 
 
+def gym_CartPole_random_monitor():
+    import gym
+    env = gym.make("CartPole-v0")
+    # 调用gym的monitor模块生成`recording`文件夹
+    # 里面包含agent每个step的信息，以及mp4文件记录agent学习过程
+    env = gym.wrappers.Monitor(env, "recording")
+
+    total_reward = 0.0
+    total_steps = 0
+    obs = env.reset()
+
+    while True:
+        action = env.action_space.sample()
+        obs, reward, done, _ = env.step(action)
+        total_reward += reward
+        total_steps += 1
+        if done:
+            break
+
+    print("Episode done in %d steps, total reward %.2f"
+          % (total_steps, total_reward))
+    env.close()
+    env.env.close()
+
+
 def gym_SuperMarioBros_env_test():
     """
     `pip install gym-super-mario-bros==7.3.0`
@@ -41,7 +66,9 @@ def gym_SuperMarioBros_env_test():
 
 if __name__ == "__main__":
     # CartPole
-    gym_CartPole_env_test()
+    # gym_CartPole_env_test()
+
+    gym_CartPole_random_monitor()
 
     # SuperMarioBros
-    gym_SuperMarioBros_env_test()
+    # gym_SuperMarioBros_env_test()
