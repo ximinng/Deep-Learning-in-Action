@@ -3,7 +3,7 @@
 
 """
 @Project: Deep-Learning-in-Action
-@File: train.py
+@File: main.py
 @Author: 轩名
 @Date: 2021/8/17 5:14 下午
 """

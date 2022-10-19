@@ -24,8 +24,8 @@
     <a href="#cite">Citing</a>
 </p>
 
-<h6 align="center">Made by ximing Xing • :milky_way:
-<a href="https://ximingxing.github.io/">https://ximingxing.github.io/</a>
+<h6 align="center">Made by XiMing Xing • :milky_way:
+<a href="https://xingxm.github.io/">https://ximinng.github.io/</a>
 </h6>
 
 <p align="center">A collection of various deep learning architectures, models, and tips for PyTorch.</p>
@@ -40,7 +40,7 @@ This repository contains many deep learning algorithms and their applications, t
 
 #### Required PyTorch version
 
-- our code requires `python >= 3.0`, `torch >= 1.0`.
+- our code requires `python >= 3.7`, `torch >= 1.0`.
 
 #### Required other packages.
 
@@ -55,12 +55,11 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
 <h2 align="center">:clipboard: Table of Contents</h2>
 
 * Multilayer Perceptrons
-    * [MLP basic]()
-    * [MLP in nn.Module](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/multilayer_perceptrons/mlp_pytorch_basic.ipynb)
+    * MLP in nn.Module
 
 * Convolutional Neural Networks (CNN)
-    * [AlexNet](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/alexnet.py)
-    * [VGG](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/convolutional_neural_networks/model/vgg.py)
+    * AlexNet
+    * VGG
 
 * Recurrent Neural Networks (RNN)
 
@@ -69,34 +68,33 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 -f https://download.pyto
     * GPT-2
 
 * Vision Transformer
-    * [ViT](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/vision_transformer/Vit.py)
+    * ViT
+
+* Diffusion Model
+    * DDPM
 
 * AutoEncoder (AE)
-    * [basic](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/auto_encoder/AutoEncoder.ipynb)
+    * VAE
 
 * Generative Adversarial Networks (GAN)
-    * [basic]()
+    * basic GAN
     * CycleGAN
 
 * Graph Neural Networks (GNN)
     * DeepWalk
     * Node2Vec
-    * [Graph Convolutional network (GCN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GCN/graph_convolutional_neural_network.ipynb)
-    * [GraphSage](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/graph_neural_networks/GraphSage/GraphSage.ipynb)
+    * Graph Convolutional network (GCN)
+    * GraphSage
 
 * Deep Reinforcement Learning
-    * [Deep Q Learning (DQN)](https://github.com/ximingxing/Deep-Learning-in-Action/blob/master/deep_reinforcement_learning/DQN.ipynb)
-    * [Reinforcement Learning with Model-Agnostic Meta-Learning]()
+    * Deep Q Learning (DQN)
+    * Reinforcement Learning with Model-Agnostic Meta-Learning
 
 * Meta Learning
-    * [MAML]()
+    * MAML
 
 * Tips and Tricks
     * [How to train a GAN?](https://github.com/soumith/ganhacks)
-
-* Visualization and Interpretation
-    * [Tensorboard](https://github.com/ximingxing/Deep-Learning-in-Action/tree/master/visualization/tensorboard)
-    * [Visdom](https://github.com/ximingxing/Deep-Learning-in-Action/tree/master/visualization/visdom)
 
 <h2 align="center">About</h2>
 
@@ -161,7 +159,7 @@ resources that pair well with the models and componenets here are listed below.
 #### BibTeX
 
 ```bibtex
-@misc{xxm2019dlic,
+@misc{xing_2019_dlic,
       author = {Ximing Xing},
       title = {Deep Learning in Action},
       year = {2019},
